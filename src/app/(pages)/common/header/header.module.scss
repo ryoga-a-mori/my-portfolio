@@ -1,0 +1,173 @@
+// Header Styles
+$headerHeight: 100px;
+$headerTransitionDuration: 0.5s;
+
+// Menu Button Styles
+$menuButtonSize: 60px;
+$menuButtonColor: #fff;
+$menuButtonLineHeight: 1.5px;
+$menuAnimationDuration: 0.75s;
+
+// Nav Styles
+$navBackgroundColor: rgba(0, 0, 0, 0.6);
+$navLinkFontSize: 1.6em;
+$navLinkMargin: 30px;
+
+// Mixins
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Keyframes
+@keyframes menu-bar01 {
+  0% {
+    transform: translateY(10px) rotate(30deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes menu-bar03 {
+  0% {
+    transform: translateY(-10px) rotate(-30deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes active-menu-bar01 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(10px) rotate(0);
+  }
+  100% {
+    transform: translateY(10px) rotate(30deg);
+  }
+}
+
+@keyframes active-menu-bar03 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0);
+  }
+  100% {
+    transform: translateY(-10px) rotate(-30deg);
+  }
+}
+
+// Styles
+header {
+  .container {
+    width: 100%;
+    height: $headerHeight;
+    padding: 0 30px 0 20px;
+    @include flex-center(row, space-between, center);
+    position: fixed;
+    z-index: 999;
+
+    .logo {
+      transition: $headerTransitionDuration;
+      position: relative;
+      width: 200px;
+      height: 40px;
+
+      &.open {
+        opacity: 0;
+      }
+    }
+
+    .menu {
+      box-sizing: border-box;
+      position: relative;
+      width: 50px;
+      height: 44px;
+
+      span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: $menuButtonLineHeight;
+        background-color: $menuButtonColor;
+
+        &:nth-of-type(1) {
+          top: 10px;
+          animation: menu-bar01 $menuAnimationDuration forwards;
+        }
+
+        &:nth-child(2) {
+          top: 20px;
+          transition: all 0.25s 0.25s;
+          opacity: 1;
+        }
+
+        &:nth-child(3) {
+          top: 30px;
+          animation: menu-bar03 $menuAnimationDuration forwards;
+        }
+      }
+
+      &.open {
+        span {
+          &:nth-of-type(1) {
+            animation: active-menu-bar01 $menuAnimationDuration forwards;
+          }
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          &:nth-child(3) {
+            animation: active-menu-bar03 $menuAnimationDuration forwards;
+          }
+        }
+      }
+    }
+  }
+
+  .nav {
+    width: 100%;
+    color: black;
+    background-color: $navBackgroundColor;
+    position: fixed;
+    text-align: center;
+    padding-top: 25vh;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    opacity: 0;
+    z-index: -100;
+    transition: $headerTransitionDuration;
+    &.open {
+      right: 0;
+      opacity: 1;
+      z-index: 100;
+    }
+    li {
+      margin: $navLinkMargin 0;
+      a {
+        font-size: $navLinkFontSize;
+        color: $menuButtonColor;
+        text-decoration: none;
+        letter-spacing: 4px;
+        &:hover {
+          border-bottom: 1px solid $menuButtonColor;
+        }
+      }
+    }
+  }
+}

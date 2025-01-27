@@ -1,0 +1,32 @@
+.container{
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  img {
+    object-fit: contain;
+    position: absolute;
+    transform: translate(0,-30vh);
+    z-index: 1;
+  }
+  .inner{
+  background-color: #E8E0D7;
+  border-top-left-radius: 50px;
+  padding: 80px 100px 40px 100px;
+  h1 {
+    text-align: left;
+    span {
+      font-size: 12px;
+    }
+  }
+  p{
+    text-align: left;
+    font-size: 12px;
+  }
+  .contact {
+    margin: 0 0 40px 0;
+  }
+  .copyright{
+    text-align: right;
+  }
+}
+}
