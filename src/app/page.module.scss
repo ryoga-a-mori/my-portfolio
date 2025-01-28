@@ -9,6 +9,7 @@
     }
   }
   .scroll {
+    display: inline-block;
     position: absolute;
     animation: scroll 2.5s infinite;
     content: "";
