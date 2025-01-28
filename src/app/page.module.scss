@@ -6,8 +6,13 @@
       object-fit: fill;
     }
   }
+  .bird {
+    img {
+      object-fit: contain;
+    }
+  }
   .about {
-    padding: 100px 10% 100px 10%;
+    padding: 0 10% 100px 10%;
     .name {
       font-size: 1.5em;
       letter-spacing: 1.5px;

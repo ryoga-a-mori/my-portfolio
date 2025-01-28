@@ -14,6 +14,11 @@ export default function Home() {
           <Image src="/images/top-mv.jpg" fill alt="" />
         </div>
       </FadeInContainer>
+      <FadeInContainer>
+        <div className={styles.bird}>
+          <Image src="/images/bird.png" width={200} height={200} alt="" />
+        </div>
+      </FadeInContainer>
       <div className={styles.about}>
         <FadeIntoRightContainer>
           <h1 className={styles.name}>
