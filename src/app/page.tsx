@@ -13,12 +13,13 @@ export default function Home() {
         <div className={styles.mv}>
           <Image src="/images/top-mv.jpg" fill alt="" />
         </div>
+        <div className={styles.scroll}></div>
       </FadeInContainer>
-      <FadeInContainer>
+      {/* <FadeInContainer>
         <div className={styles.bird}>
           <Image src="/images/bird.png" width={110} height={90} alt="" />
         </div>
-      </FadeInContainer>
+      </FadeInContainer> */}
       <div className={styles.about}>
         <FadeIntoRightContainer>
           <h1 className={styles.name}>
