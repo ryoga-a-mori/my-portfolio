@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import "./_reset.scss";
 import "./_global.scss";
 import Header from "./(pages)/common/header/header";
+import { FadeInContainer } from "./(pages)/common/animations";
 
 export const metadata: Metadata = {
-  title: "テンプレートサイト",
-  description: "これはテンプレートとして作成しました。",
+  title: "Portfolio | Ryoga Mori",
+  description: "これはRyoga Moriのポートフォリオサイトとして作成しました。",
 };
 
 export default function Layout({

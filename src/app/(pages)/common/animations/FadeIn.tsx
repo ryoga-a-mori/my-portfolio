@@ -21,6 +21,7 @@ const variants: Variants = {
     opacity: 1,
     transition: {
       duration: 2,
+      ease: "easeOut",
     },
   },
 };

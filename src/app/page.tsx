@@ -9,9 +9,11 @@ import {
 export default function Home() {
   return (
     <div className={styles.container}>
-      <div className={styles.mv}>
-        <Image src="/images/top-mv.jpg" fill alt="" />
-      </div>
+      <FadeInContainer>
+        <div className={styles.mv}>
+          <Image src="/images/top-mv.jpg" fill alt="" />
+        </div>
+      </FadeInContainer>
       <div className={styles.about}>
         <FadeIntoRightContainer>
           <h1 className={styles.name}>
