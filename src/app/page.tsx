@@ -16,7 +16,7 @@ export default function Home() {
       </FadeInContainer>
       <FadeInContainer>
         <div className={styles.bird}>
-          <Image src="/images/bird.png" width={200} height={200} alt="" />
+          <Image src="/images/bird.png" width={110} height={90} alt="" />
         </div>
       </FadeInContainer>
       <div className={styles.about}>
