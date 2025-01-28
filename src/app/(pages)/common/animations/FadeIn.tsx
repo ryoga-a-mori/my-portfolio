@@ -20,8 +20,8 @@ const variants: Variants = {
   onscreen: {
     opacity: 1,
     transition: {
-      duration: 2,
-      ease: "easeOut",
+      duration: 1,
+      ease: "easeIn",
     },
   },
 };

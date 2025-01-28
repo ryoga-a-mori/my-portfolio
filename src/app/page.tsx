@@ -28,10 +28,9 @@ export default function Home() {
         </FadeIntoRightContainer>
         <FadeInContainer>
           <div className={styles.description}>
-            大学院を卒業後、ITメガベンチャーに就職。現在2年目になります。
-            大学から今までに得た豊富な経験を活かし、新しい技術を習得することが得意です。
+            大学院を卒業後、ITメガベンチャーに就職。今まで得た豊富な経験を活かし、新しい技術を習得することが得意です。
             また小さい頃からファッションに興味があり、デザイン力も鍛えられてきました。
-            現在は、応用情報技術者と英語の勉強をしています。
+            常に新しいことに挑戦し、成長することを楽しんでいます。
           </div>
         </FadeInContainer>
       </div>

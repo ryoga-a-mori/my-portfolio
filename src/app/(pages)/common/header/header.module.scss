@@ -165,8 +165,13 @@ header {
         text-decoration: none;
         letter-spacing: 4px;
         &:hover {
-          border-bottom: 1px solid $menuButtonColor;
+          opacity: 0.8;
         }
+      }
+    }
+    .sns {
+        svg {
+          margin: 10% 10px 0 10px;
       }
     }
   }
